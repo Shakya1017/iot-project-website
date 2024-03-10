@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Smart Home Control</title>
+  <link rel="stylesheet" href="index.css">
+
+    <script src="index.js" defer></script>
+   
+  
+  
+  <style>
+
+        body {
+            background-image: url('background.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+         .control-section {
+            background-color: rgba(255, 255, 255, 0.8); /* Adjust the last value (0.8) for desired translucency */
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        
+     /* Random light color styles (optional) */
+     body:not(.dark-mode) {
+      background-color: hsl(Math)random() * 360, 100%, 80%;
+    }
+
+  </style>
+
+</head>
+<body>
+  <header>
+    <h1>Welcome to Your Smart Home Control</h1>
+    <nav>
+      <ul>
+        <li><a href="login.html">Logout</a></li> 
+        
+        <li class="user-btn" style="margin-left: 5px;"></li>
+          <a href="user.html">
+            <img src="user.png.png" alt="User Icon" width="20" height="20">
+          </a>
+        </li>
+      </ul>
+    </nav>
+   
+
+    <div class="toggle-switch">
+      <input type="checkbox" id="dark-mode-toggle" onclick="toggleDarkMode()">
+      <label for="dark-mode-toggle">Toggle Dark Mode</label>
+    </div>
+  </header>
+  
+  <section id="lightControl" class="control-section">
+    <h2>Light Control</h2>
+    <div class="control">
+      <img src="light.png" alt="Light Icon">
+      <button onclick="toggleControl('light')">Turn On/Off</button>
+      <button onclick="viewMoreData('light')">View More Data</button>
+      <p>Status: <span id="lightStatus">Off</span></p> <hr>
+      <div id="lightData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+  <section id="water PlantationControl" class="control-section">
+    <h2>Water Plantation Control</h2>
+    <div class="control">
+      <img src="plantation.png" alt="Water Icon">
+      <button onclick="toggleControl('waterPlantation')">Turn On/Off</button>
+      <button onclick="viewMoreData('waterPlantation')">View More Data</button>
+      <p>Status: <span id="water Plantation Status">Off</span></p> <hr>
+      <div id="waterPlantationData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+   <section id="smokeDetectionControl" class="control-section">
+    <h2>Smoke Detection Control</h2>
+    <div class="control">
+      <img src="smoke.png" alt="Smoke Icon">
+      <button onclick="toggleControl('smokeDetection')">Turn On/Off</button>
+      <button onclick="viewMoreData('smokeDetection')">View More Data</button>
+      <p>Status: <span id="smokeDetectionStatus">Off</span></p> <hr>
+      <div id="smokeDetectionData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+     <section id="fireAlarmControl" class="control-section">
+    <h2>Fire Alarm Control</h2>
+    <div class="control">
+      <img src="firealarm.png" alt="Fire Icon">
+      <button onclick="toggleControl('fireAlarm')">Turn On/Off</button>
+      <button onclick="viewMoreData('fireAlarm')">View More Data</button>
+      <p>Status: <span id="fireAlarmStatus">Off</span></p> <hr>
+      <div id="fireAlarmData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+  <section id="waterOverflowControl" class="control-section">
+    <h2>Water Overflow Control</h2>
+    <div class="control">
+      <img src="overflow.png" alt="Water Overflow Icon">
+      <button onclick="toggleControl('waterOverflow')">Turn On/Off</button>
+      <button onclick="viewMoreData('waterOverflow')">View More Data</button>
+      <p>Status: <span id="waterOverflowStatus">Off</span></p> <hr>
+      <div id="waterOverflowData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+  <section id="motionDetectionControl" class="control-section">
+    <h2>Motion Detection Control</h2>
+    <div class="control">
+      <img src="motion.png" alt="Motion Icon">
+      <button onclick="toggleControl('motionDetection')">Turn On/Off</button>
+      <button onclick="viewMoreData('motionDetection')">View More Data</button>
+      <p>Status: <span id="motionDetectionStatus">Off</span></p> <hr>
+      <div id="motionDetectionData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+   <section id="gasSensorControl" class="control-section">
+    <h2>Gas Sensor Control</h2>
+    <div class="control">
+      <img src="smoke.png" alt="Gas Icon">
+      <button onclick="toggleControl('gasSensor')">Turn On/Off</button>
+      <button onclick="viewMoreData('gasSensor')">View More Data</button>
+      <p>Status: <span id="gasSensorStatus">Off</span></p> <hr>
+      <div id="gasSensorData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+   <section id="emergencySOSButtonControl" class="control-section">
+    <h2>Emergency SOS Button Control</h2>
+    <div class="control">
+      <img src="sos-14190.png" alt="Emergency Icon">
+      <button onclick="toggleControl('emergencySOS')">Turn On/Off</button>
+      <button onclick="viewMoreData('emergencySOS')">View More Data</button>
+      <p>Status: <span id="emergencySOSStatus">Off</span></p> <hr>
+      <div id="emergencySOSData" class="hidden">No data available</div>
+    </div>
+  </section>
+
+
+  <!-- Add more sections for other controls -->
+
+  <footer>
+      <p> Smart Home Control</p>
+  </footer>
+
+  <script src="index.js"></script>
+</body>
+</html>
